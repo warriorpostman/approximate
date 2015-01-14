@@ -8,6 +8,30 @@ describe('approximate parser ', function() {
     expect(approx.contextYear).to.equal(2015);
   });
 
+  it('rejects missing MMM', function(){
+    var approx = approxModule(2015)
+    var func = function() { approx.parse('15') };
+    expect(func).to.throw(Error);
+  });
+
+  it('rejects bogus MMM', function(){
+    var approx = approxModule(2015)
+    var func = function() { approx.parse('FOO 15') };
+    expect(func).to.throw(Error);
+  });
+
+  it('rejects bad (missing) DD', function(){
+    var approx = approxModule(2015)
+    var func = function() { approx.parse('JAN') };
+    expect(func).to.throw(Error);
+  });
+
+  it('rejects bad (excess) DD', function(){
+    var approx = approxModule(2015)
+    var func = function() { approx.parse('JAN 150') };
+    expect(func).to.throw(Error);
+  });
+
   it('parses a simple colloquial date', function(){
     var approx = approxModule(2015)
     var parsed = approx.parse('JAN 15');

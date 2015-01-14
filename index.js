@@ -8,7 +8,7 @@ module.exports = function( year ) {
     parse : function( value ) {
       var lower = value.toLowerCase();
       var matches = lower.match(
-          /(jan|feb|mar|apr|jun|jul|aug|sep|oct|nov|dec)\ +[0-2]?[0-9]{1}/g
+          /(jan|feb|mar|apr|jun|jul|aug|sep|oct|nov|dec)\ +[0-9]{1,2}$/g
           );
       if (matches && matches.length == 1)
         return new Date(value + ', ' + contextYear); 
