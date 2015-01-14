@@ -1,11 +1,20 @@
 var proxy;
 
 module.exports = function( year ) {
+  var contextYear = year;
   // TODO: do a check here that it's a legit number at least, and year 
   proxy = { 
-    contextYear : year, 
+    contextYear : contextYear, 
     parse : function( value ) {
-      return Date.now();
+      var lower = value.toLowerCase();
+      var matches = lower.match(
+          ///(jan|feb|mar|apr|jun|jul|aug|sep|oct|nov|dec){1} [0-2]?[0-9]{1}/
+          /(jan|feb|mar|apr|jun|jul|aug|sep|oct|nov|dec)/g
+          );
+      if (matches && matches.length == 1)
+        return new Date(value + ', ' + contextYear); 
+      else 
+        throw new Error('blah');
     }
   };
   return proxy;
