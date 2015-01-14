@@ -1,0 +1,23 @@
+{
+  "name": "approximate",
+  "version": "0.0.1",
+  "description": "A library to parse \"approximate\" dates",
+  "main": "approximate.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/warriorpostman/approximate.git"
+  },
+  "keywords": [
+    "date",
+    "parsing"
+  ],
+  "author": "Rustam Kasad <warriorpostman@gmail.com> (https://github.com/warriorpostman/approximate)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/warriorpostman/approximate/issues"
+  },
+  "homepage": "https://github.com/warriorpostman/approximate"
+}
