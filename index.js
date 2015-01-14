@@ -1,9 +1,13 @@
-var contextYear = -1;
+var proxy;
 
 module.exports = function( year ) {
-  contextYear = year;
+  // TODO: do a check here that it's a legit number at least, and year 
+  proxy = { 
+    contextYear : year, 
+    parse : function( value ) {
+      return Date.now();
+    }
+  };
+  return proxy;
 }
 
-module.exports = function ( stringValue ) {
-  return Date.now();
-}
