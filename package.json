@@ -2,7 +2,7 @@
   "name": "approximate",
   "version": "0.0.1",
   "description": "A library to parse \"approximate\" dates",
-  "main": "approximate.js",
+  "main": "index.js",
   "scripts": {
     "test": "test"
   },
@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/warriorpostman/approximate/issues"
   },
-  "homepage": "https://github.com/warriorpostman/approximate"
+  "homepage": "https://github.com/warriorpostman/approximate",
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "mocha": "^2.1.0"
+  }
 }
