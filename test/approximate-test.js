@@ -7,6 +7,7 @@ describe('approximate parser ', function() {
     expect(approx).to.not.be.null;
     expect(approx.contextYear).to.equal(2015);
   });
+
   it('parses a simple colloquial date', function(){
     var approx = approxModule(2015)
     var parsed = approx.parse('JAN 15');
