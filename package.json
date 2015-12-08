@@ -1,6 +1,6 @@
 {
   "name": "approximate",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A library to parse \"approximate\" dates",
   "main": "index.js",
   "scripts": {
