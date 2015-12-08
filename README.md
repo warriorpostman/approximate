@@ -18,7 +18,7 @@ A library to parse "approximate" dates.
     // yields timestamp equivalent to January 15, 2015 00:00:00Z
     ```
 
-...and:
+ - ...and:
 
     ```javascript
     var approx = require('approximate')(2015);
